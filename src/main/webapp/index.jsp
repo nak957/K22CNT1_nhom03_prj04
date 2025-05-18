@@ -63,7 +63,7 @@
                 <div class="card-body text-center">
                     <h5 class="card-title">Gaming Combo</h5>
                     <p class="card-text font-weight-bold">368.000 đ/tháng</p>
-                    <p class="card-text text-muted">Học mua từ 9.799.000 đ</p>
+                    <p class="card-text text-muted">Hoặc mua từ 9.799.000 đ</p>
                 </div>
             </div>
         </div>
@@ -74,7 +74,7 @@
                 <div class="card-body text-center">
                     <h5 class="card-title">IKEA Lover Double Combo</h5>
                     <p class="card-text font-weight-bold">680.000 đ/tháng</p>
-                    <p class="card-text text-muted">Học mua từ 18.120.000 đ</p>
+                    <p class="card-text text-muted">Hoặc mua từ 18.120.000 đ</p>
                 </div>
             </div>
         </div>
@@ -85,7 +85,7 @@
                 <div class="card-body text-center">
                     <h5 class="card-title">Minimalism Combo</h5>
                     <p class="card-text font-weight-bold">500.000 đ/tháng</p>
-                    <p class="card-text text-muted">Học mua từ 5.156.000 đ</p>
+                    <p class="card-text text-muted">Hoặc mua từ 5.156.000 đ</p>
                 </div>
             </div>
         </div>
@@ -96,7 +96,7 @@
                 <div class="card-body text-center">
                     <h5 class="card-title">Scandinavian Combo</h5>
                     <p class="card-text font-weight-bold">706.000 đ/tháng</p>
-                    <p class="card-text text-muted">Học mua từ 18.816.000 đ</p>
+                    <p class="card-text text-muted">Hoặc mua từ 18.816.000 đ</p>
                 </div>
             </div>
         </div>
@@ -114,7 +114,7 @@
                 <div class="card-body text-center">
                     <h5 class="card-title">Set phòng khách 01</h5>
                     <p class="card-text font-weight-bold">368.000 đ/tháng</p>
-                    <p class="card-text text-muted">Học mua từ 9.799.000 đ</p>
+                    <p class="card-text text-muted">Hoặc mua từ 9.799.000 đ</p>
                 </div>
             </div>
         </div>
@@ -125,7 +125,7 @@
                 <div class="card-body text-center">
                     <h5 class="card-title">Set phòng khách 02</h5>
                     <p class="card-text font-weight-bold">680.000 đ/tháng</p>
-                    <p class="card-text text-muted">Học mua từ 18.120.000 đ</p>
+                    <p class="card-text text-muted">Hoặc mua từ 18.120.000 đ</p>
                 </div>
             </div>
         </div>
@@ -136,7 +136,7 @@
                 <div class="card-body text-center">
                     <h5 class="card-title">Set phòng ngủ 01</h5>
                     <p class="card-text font-weight-bold">500.000 đ/tháng</p>
-                    <p class="card-text text-muted">Học mua từ 5.156.000 đ</p>
+                    <p class="card-text text-muted">Hoặc mua từ 5.156.000 đ</p>
                 </div>
             </div>
         </div>
@@ -147,7 +147,7 @@
                 <div class="card-body text-center">
                     <h5 class="card-title">Set phòng ngủ 02</h5>
                     <p class="card-text font-weight-bold">706.000 đ/tháng</p>
-                    <p class="card-text text-muted">Học mua từ 18.816.000 đ</p>
+                    <p class="card-text text-muted">Hoặc mua từ 18.816.000 đ</p>
                 </div>
             </div>
         </div>
