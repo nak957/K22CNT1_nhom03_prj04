@@ -12,7 +12,6 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-<<<<<<< HEAD
     <!-- Navigation links & actions -->
     <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
         <!-- Menu trung tâm -->
@@ -21,18 +20,6 @@
             <li class="nav-item"><a class="nav-link" href="#">Cho Doanh nghiệp</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Sản phẩm</a></li>
         </ul>
-=======
-    <!-- Font Awesome 6 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body class="bg-light">
-    <!-- Navbar (Fixed) -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4 fixed-top">
-        <!-- Logo -->
-       <a class="navbar-brand font-weight-bold text-primary" href="#">
-    <img src="assets/img/logo.png" alt="Goldwin Logo" width="140" height="90" class="d-inline-block align-text-top">
-	   </a>
->>>>>>> 2e9b011 (update)
 
         <!-- Nút bên phải -->
         <div class="d-flex align-items-center">
@@ -47,27 +34,8 @@
                 <img src="https://flagcdn.com/w20/vn.png" width="20" height="14" class="mr-1"> Hà Nội
             </button>
 
-<<<<<<< HEAD
             <!-- Đăng nhập -->
             <button class="btn btn-primary btn-sm">Đăng nhập</button>
-=======
-            <!-- Nút bên phải -->
-            <div class="d-flex align-items-center">
-                <!-- Giỏ hàng -->
-                <button id="cartButton" class="btn btn-outline-primary btn-sm position-relative mr-2">
-                    <i class="fa-solid fa-cart-plus"></i>
-                    <span id="cartCount" class="badge badge-warning position-absolute" style="top: -6px; right: -10px; display: none;">0</span>
-                </button>
-
-                <!-- Vị trí -->
-                <button class="btn btn-outline-secondary btn-sm mr-2">
-                    <img src="https://flagcdn.com/w20/vn.png" width="20" height="14" class="mr-1"> Hà Nội
-                </button>
-
-                <!-- Đăng nhập -->
-                <button class="btn btn-primary btn-sm">Đăng nhập</button>
-            </div>
->>>>>>> 2e9b011 (update)
         </div>
     </div>
 </nav>
