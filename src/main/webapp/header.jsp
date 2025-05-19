@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!-- Navbar (Fixed) -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4 fixed-top">
-    <!-- Logo -->
-    <a class="navbar-brand font-weight-bold text-primary" href="${pageContext.request.contextPath}/index.jsp">
-        <span class="text-lowercase">Goldwin</span>
-    </a>
+    
+   <!-- Logo -->
+       <a class="navbar-brand font-weight-bold text-primary" href="#">
+    <img src="assets/img/logo.png" alt="Goldwin Logo" width="140" height="90" class="d-inline-block align-text-top">
+	   </a>
 
     <!-- Toggle button on mobile -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
