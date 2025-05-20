@@ -1,11 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!-- Navbar (Fixed) -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4 fixed-top">
-    
-   <!-- Logo -->
-       <a class="navbar-brand font-weight-bold text-primary" href="#">
-    <img src="assets/img/logo.png" alt="Goldwin Logo" width="140" height="90" class="d-inline-block align-text-top">
-	   </a>
+    <!-- Logo -->
+    <a class="navbar-brand font-weight-bold text-primary" href="${pageContext.request.contextPath}/index.jsp">
+        <img src="${pageContext.request.contextPath}/assets/img/logo.png" alt="Goldwin Logo" width="160" height="80" class="d-inline-block align-text-top">
+    </a>
 
     <!-- Toggle button on mobile -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -17,36 +16,42 @@
     <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
         <!-- Menu trung tâm -->
         <ul class="navbar-nav mx-auto">
-            <li class="nav-item active"><a class="nav-link" href="${pageContext.request.contextPath}/index.jsp">Trang chủ</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Cho Doanh nghiệp</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Sản phẩm</a></li>
+            <li class="nav-item <%= request.getRequestURI().contains("index.jsp") ? "active" : "" %>">
+                <a class="nav-link" href="${pageContext.request.contextPath}/index.jsp">Trang chủ</a>
+            </li>
+            <li class="nav-item <%= request.getRequestURI().contains("nguoidung/Doanhnghiep.jsp") ? "active" : "" %>">
+                <a class="nav-link" href="${pageContext.request.contextPath}/nguoidung/Doanhnghiep.jsp">Cho Doanh nghiệp</a>
+            </li>
+            <li class="nav-item <%= request.getRequestURI().contains("Sanpham.jsp") ? "active" : "" %>">
+                <a class="nav-link" href="${pageContext.request.contextPath}/nguoidung/Sanpham.jsp">Sản phẩm</a>
+            </li>
         </ul>
 
         <!-- Nút bên phải -->
         <div class="d-flex align-items-center">
+            <!-- Thông báo nếu là trang Doanhnghiep.jsp -->
+            <% if (request.getRequestURI().contains("nguoidung/Doanhnghiep.jsp")) { %>
+               
+            <% } %>
             <!-- Giỏ hàng -->
             <a id="cartButton" href="${pageContext.request.contextPath}/nguoidung/Giohang.jsp" class="btn btn-outline-primary btn-sm position-relative mr-2">
-                <i class="fa-solid fa-shopping-cart"></i> <!-- Thay fa-cart-plus bằng fa-shopping-cart -->
-                <span id="cartCount" class="badge badge-warning position-absolute" style="top: -6px; right: -10px; display: none;">0</span>
+                <i class="fa-solid fa-shopping-cart"></i>
+                <span id="cartCount" class="badge badge-warning position-absolute" style="top: -6px; right: -10px;">0</span>
             </a>
 
             <!-- Vị trí -->
             <button class="btn btn-outline-secondary btn-sm mr-2">
-                <img src="https://flagcdn.com/w20/vn.png" width="20" height="14" class="mr-1"> Hà Nội
+                <img src="https://flagcdn.com/w20/vn.png" width="20" height="14" class="mr-1 align-middle"> Hà Nội
             </button>
 
             <!-- Đăng nhập -->
-            <button class="btn btn-primary btn-sm">Đăng nhập</button>
+           <button class="btn btn-primary btn-sm" onclick="window.location.href='${pageContext.request.contextPath}/login_register/Dky_Dnhap.jsp'">Đăng nhập</button>
+
         </div>
+        
+        
     </div>
 </nav>
-
-<!-- Bootstrap + jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Font Awesome (Kiểm tra lại liên kết) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <!-- Script giỏ hàng -->
 <script>
@@ -55,13 +60,15 @@
     // Lấy số lượng từ session (nếu có)
     <% if (session.getAttribute("cartSize") != null) { %>
         cartQuantity = <%= session.getAttribute("cartSize") %>;
+    <% } else { %>
+        cartQuantity = 0; // Đặt mặc định nếu session không tồn tại
     <% } %>
 
     function updateCartCount() {
         const badge = document.getElementById('cartCount');
         if (cartQuantity > 0) {
             badge.style.display = 'inline-block';
-            badge.innerText = cartQuantity > 9 ? '9+' : cartQuantity;
+            badge.textContent = cartQuantity > 9 ? '9+' : cartQuantity;
         } else {
             badge.style.display = 'none';
         }
@@ -78,9 +85,9 @@
                 'Content-Type': 'application/x-www-form-urlencoded',
             },
             body: 'cartSize=' + cartQuantity
-        });
+        }).catch(error => console.error('Error updating cart:', error));
     }
 
-    // Khởi tạo badge
-    updateCartCount();
+    // Khởi tạo badge khi trang tải
+    document.addEventListener('DOMContentLoaded', updateCartCount);
 </script>
