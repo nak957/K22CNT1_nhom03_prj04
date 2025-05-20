@@ -10,7 +10,9 @@
 <body>
 
 
-
+<div class="container-fluid px-0">
+  <hr class="border border-1 border-secondary opacity-75 m-0">
+</div>
 <!-- Footer -->
 <footer class="bg-light text-dark pt-4">
     <div class="container">
