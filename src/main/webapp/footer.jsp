@@ -18,11 +18,11 @@
 
             <!-- Thông tin công ty -->
             <div class="col-md-4 mb-4">
-                <h5 class="text-uppercase">Công ty Cổ phần Remospace</h5>
-                <p class="mb-1">Hotline: <a href="tel:0339037930">0339037930</a></p>
-                <p class="mb-1">Email: <a href="mailto:hi@remospace.co">hi@remospace.co</a></p>
-                <p class="mb-1">K2.11, Đường D15, KDC River Park,<br>TP. Thủ Đức, TP. Hồ Chí Minh, Việt Nam</p>
-                <p class="mb-0">Mã số DN: 0317826691 - Sở KH&ĐT TP.HCM</p>
+                <h5 class="text-uppercase">Công ty Cổ phần Goldwin</h5>
+                <p class="mb-1">Hotline: <a href="tel:0339037930">0327293429</a></p>
+                <p class="mb-1">Email: <a href="mailto:hi@remospace.co">hoangkimoanh04052004@gmail.com</a></p>
+                <p class="mb-1">Đại học Nguyễn Trãi<br>Hà Đông,Hà Nội, Việt Nam</p>
+                <p class="mb-0">Mã số DN: 0327293429 - Sở Hà Nội</p>
             </div>
 
             <!-- Liên kết -->
