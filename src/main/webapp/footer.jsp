@@ -58,8 +58,11 @@
         <div class="text-center py-3 border-top">
             © <%= java.time.Year.now() %> Remospace. All rights reserved.
         </div>
+        
     </div>
+    
 </footer>
+<jsp:include page="nguoidung/Hotro.jsp" />
 
 <!-- Script Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
