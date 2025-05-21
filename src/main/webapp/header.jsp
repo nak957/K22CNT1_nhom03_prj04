@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4 fixed-top">
     <!-- Logo -->
     <a class="navbar-brand font-weight-bold text-primary" href="${pageContext.request.contextPath}/index.jsp">
-        <img src="${pageContext.request.contextPath}/assets/img/logo.png" alt="Goldwin Logo" width="160" height="80" class="d-inline-block align-text-top">
+        <img src="${pageContext.request.contextPath}/assets/img/logo.png" alt="Goldwin Logo" width="140" height="90" class="d-inline-block align-text-top">
     </a>
 
     <!-- Toggle button on mobile -->
@@ -45,7 +45,7 @@
             </button>
 
             <!-- Đăng nhập -->
-           <button class="btn btn-primary btn-sm" onclick="window.location.href='${pageContext.request.contextPath}/login_register/Dky_Dnhap.jsp'">Đăng nhập</button>
+           <button class="btn btn-primary btn-sm" onclick="window.location.href='${pageContext.request.contextPath}/login_register/login.jsp'">Đăng nhập</button>
 
         </div>
         
