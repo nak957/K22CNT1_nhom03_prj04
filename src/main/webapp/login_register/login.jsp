@@ -55,7 +55,9 @@
                             </button>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Tiếp tục</button>
+                    <button type="submit" class="btn btn-primary w-100 ">
+                     <a class="nav-link class="btn btn-primary w-100" href="${pageContext.request.contextPath}/index.jsp">Tiếp tục </a>
+                    </button>
                 </form>
 
                 <div class="text-center mt-3">
