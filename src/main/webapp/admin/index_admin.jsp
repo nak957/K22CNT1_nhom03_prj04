@@ -1,3 +1,11 @@
+<%@ page import="dao.NhanVienDAO" %>
+<%@ page import="model.NhanVien" %>
+<%@ page import="java.util.List" %>
+<%
+    NhanVienDAO dao = new NhanVienDAO();
+    List<NhanVien> danhSach = dao.getAllNhanVien();
+%>
+
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="vi">
