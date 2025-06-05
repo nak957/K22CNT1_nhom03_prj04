@@ -1,31 +1,39 @@
 package model;
 
-import java.time.LocalDateTime;
+import java.sql.Timestamp;
 
 public class NguoiDung {
-    private int maNguoiDung;
+    private int maNguoiDung;       // Đổi từ id -> maNguoiDung
     private String email;
     private String matKhau;
-    private String hoTen;
-    private String soDienThoai;
-    private String diaChi;
     private String vaiTro;
-    private LocalDateTime ngayTao;
-    private LocalDateTime ngayCapNhat;
+    private String hoTen;
+    private Timestamp ngayTao;
+    private Timestamp ngayCapNhat;
 
-    // Constructor
+    // Constructor mặc định
     public NguoiDung() {}
 
-    public NguoiDung(String email, String matKhau, String hoTen, String soDienThoai, String diaChi, String vaiTro) {
+    // Constructor đầy đủ
+    public NguoiDung(int maNguoiDung, String email, String matKhau, String vaiTro, String hoTen, Timestamp ngayTao, Timestamp ngayCapNhat) {
+        this.maNguoiDung = maNguoiDung;
         this.email = email;
         this.matKhau = matKhau;
-        this.hoTen = hoTen;
-        this.soDienThoai = soDienThoai;
-        this.diaChi = diaChi;
         this.vaiTro = vaiTro;
+        this.hoTen = hoTen;
+        this.ngayTao = ngayTao;
+        this.ngayCapNhat = ngayCapNhat;
     }
 
-    // Getters and Setters
+    // Constructor không có ID, dành cho insert mới
+    public NguoiDung(String email, String matKhau, String vaiTro, String hoTen) {
+        this.email = email;
+        this.matKhau = matKhau;
+        this.vaiTro = vaiTro;
+        this.hoTen = hoTen;
+    }
+
+    // Getter - Setter
     public int getMaNguoiDung() {
         return maNguoiDung;
     }
@@ -50,30 +58,6 @@ public class NguoiDung {
         this.matKhau = matKhau;
     }
 
-    public String getHoTen() {
-        return hoTen;
-    }
-
-    public void setHoTen(String hoTen) {
-        this.hoTen = hoTen;
-    }
-
-    public String getSoDienThoai() {
-        return soDienThoai;
-    }
-
-    public void setSoDienThoai(String soDienThoai) {
-        this.soDienThoai = soDienThoai;
-    }
-
-    public String getDiaChi() {
-        return diaChi;
-    }
-
-    public void setDiaChi(String diaChi) {
-        this.diaChi = diaChi;
-    }
-
     public String getVaiTro() {
         return vaiTro;
     }
@@ -82,19 +66,27 @@ public class NguoiDung {
         this.vaiTro = vaiTro;
     }
 
-    public LocalDateTime getNgayTao() {
+    public String getHoTen() {
+        return hoTen;
+    }
+
+    public void setHoTen(String hoTen) {
+        this.hoTen = hoTen;
+    }
+
+    public Timestamp getNgayTao() {
         return ngayTao;
     }
 
-    public void setNgayTao(LocalDateTime ngayTao) {
+    public void setNgayTao(Timestamp ngayTao) {
         this.ngayTao = ngayTao;
     }
 
-    public LocalDateTime getNgayCapNhat() {
+    public Timestamp getNgayCapNhat() {
         return ngayCapNhat;
     }
 
-    public void setNgayCapNhat(LocalDateTime ngayCapNhat) {
+    public void setNgayCapNhat(Timestamp ngayCapNhat) {
         this.ngayCapNhat = ngayCapNhat;
     }
 }
