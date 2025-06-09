@@ -26,6 +26,7 @@ public class NguoiDungDAO {
                 user.setMatKhau(rs.getString("mat_khau"));
                 user.setVaiTro(rs.getString("vai_tro"));
                 user.setHoTen(rs.getString("ho_ten"));
+                user.setSoDienThoai(rs.getString("so_dien_thoai"));
                 user.setNgayTao(rs.getTimestamp("ngay_tao"));
                 user.setNgayCapNhat(rs.getTimestamp("ngay_cap_nhat"));
             }
@@ -52,6 +53,7 @@ public class NguoiDungDAO {
                 user.setMatKhau(rs.getString("mat_khau"));
                 user.setVaiTro(rs.getString("vai_tro"));
                 user.setHoTen(rs.getString("ho_ten"));
+                user.setSoDienThoai(rs.getString("so_dien_thoai"));
                 user.setNgayTao(rs.getTimestamp("ngay_tao"));
                 user.setNgayCapNhat(rs.getTimestamp("ngay_cap_nhat"));
             }
@@ -92,6 +94,7 @@ public class NguoiDungDAO {
                 user.setMatKhau(rs.getString("mat_khau"));
                 user.setVaiTro(rs.getString("vai_tro"));
                 user.setHoTen(rs.getString("ho_ten"));
+                user.setSoDienThoai(rs.getString("so_dien_thoai"));
                 user.setNgayTao(rs.getTimestamp("ngay_tao"));
                 user.setNgayCapNhat(rs.getTimestamp("ngay_cap_nhat"));
                 list.add(user);
@@ -119,6 +122,7 @@ public class NguoiDungDAO {
                 user.setMatKhau(rs.getString("mat_khau"));
                 user.setVaiTro(rs.getString("vai_tro"));
                 user.setHoTen(rs.getString("ho_ten"));
+                user.setSoDienThoai(rs.getString("so_dien_thoai"));
                 user.setNgayTao(rs.getTimestamp("ngay_tao"));
                 user.setNgayCapNhat(rs.getTimestamp("ngay_cap_nhat"));
             }
@@ -130,7 +134,7 @@ public class NguoiDungDAO {
 
     // Thêm người dùng mới
     public void insertUser(NguoiDung user) {
-        String sql = "INSERT INTO nguoidung (email, mat_khau, vai_tro, ho_ten, ngay_tao, ngay_cap_nhat) VALUES (?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)";
+        String sql = "INSERT INTO nguoidung (email, mat_khau, vai_tro, ho_ten, so_dien_thoai, ngay_tao, ngay_cap_nhat) VALUES (?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)";
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
              
@@ -138,6 +142,7 @@ public class NguoiDungDAO {
             stmt.setString(2, user.getMatKhau());
             stmt.setString(3, user.getVaiTro());
             stmt.setString(4, user.getHoTen());
+            stmt.setString(5, user.getSoDienThoai());
             stmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

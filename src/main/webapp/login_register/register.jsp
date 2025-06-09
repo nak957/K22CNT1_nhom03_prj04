@@ -45,7 +45,7 @@
 
                         <form action="/K22CNT1_nhom03_prj04/login_register/nguoidung?action=register" method="post">
                             <div class="mb-3">
-                                <label for="email" class="form-label">Gmail hoặc số điện thoại</label>
+                                <label for="email" class="form-label">vui lòng nhập email</label>
                                 <input type="text" class="form-control" id="email" name="email" required>
                             </div>
                             <div class="mb-3">
@@ -66,6 +66,15 @@
                                     </button>
                                 </div>
                             </div>
+							 <div class="mb-3">
+							    <label for="soDienThoai" class="form-label">Số điện thoại</label>
+							    <input type="text" class="form-control" id="soDienThoai" name="soDienThoai" required>
+							</div><div class="mb-3">
+							    <label for="hoTen" class="form-label">Họ tên</label>
+							    <input type="text" class="form-control" id="hoTen" name="hoTen" required>
+							</div>
+							
+                            
                             <button type="submit" class="btn btn-primary w-100">Tiếp tục</button>
                             <div id="error-message" class="alert alert-danger mt-3" role="alert" style="display: none;">
                                 Mật khẩu không khớp!

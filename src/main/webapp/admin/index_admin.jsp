@@ -5,6 +5,15 @@
     NhanVienDAO dao = new NhanVienDAO();
     List<NhanVien> danhSach = dao.getAllNhanVien();
 %>
+<%@ page import="model.NguoiDung" %>
+<%
+    NguoiDung user = (NguoiDung) session.getAttribute("nguoiDung");
+    if (user == null) {
+        // Nếu chưa đăng nhập thì chuyển hướng về trang login
+        response.sendRedirect(request.getContextPath() + "/login.jsp");
+        return;
+    }
+%>
 
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <!DOCTYPE html>
@@ -61,6 +70,8 @@
 
           <!-- Nút bên phải -->
           <div class="d-flex align-items-center gap-3 ms-auto">
+         <!-- Lời chào -->
+  			<span class="fw-bold text-dark me-3">Xin chào, <%= user.getHoTen() %>!</span>
             <!-- Thông báo -->
             <a id="notificationButton" href="#" class="btn btn-outline-primary btn-sm position-relative">
               <i class="fa-solid fa-bell"></i>
@@ -72,7 +83,7 @@
               <span id="messageCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">0</span>
             </a>
             <!-- Đăng xuất -->
-            <button class="btn btn-outline-danger btn-sm" onclick="window.location.href='${pageContext.request.contextPath}/admin/dangnhapadmin.jsp'">
+            <button class="btn btn-outline-danger btn-sm" onclick="window.location.href='${pageContext.request.contextPath}/login_register/login.jsp'">
               <i class="fas fa-sign-out-alt me-1"></i>Đăng xuất
                 
               

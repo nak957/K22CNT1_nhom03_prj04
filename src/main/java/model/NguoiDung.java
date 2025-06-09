@@ -8,6 +8,7 @@ public class NguoiDung {
     private String matKhau;
     private String vaiTro;
     private String hoTen;
+    private String soDienThoai;
     private Timestamp ngayTao;
     private Timestamp ngayCapNhat;
 
@@ -21,6 +22,7 @@ public class NguoiDung {
         this.matKhau = matKhau;
         this.vaiTro = vaiTro;
         this.hoTen = hoTen;
+        this.soDienThoai = soDienThoai;
         this.ngayTao = ngayTao;
         this.ngayCapNhat = ngayCapNhat;
     }
@@ -31,6 +33,7 @@ public class NguoiDung {
         this.matKhau = matKhau;
         this.vaiTro = vaiTro;
         this.hoTen = hoTen;
+        this.soDienThoai = soDienThoai;
     }
 
     // Getter - Setter
@@ -89,4 +92,12 @@ public class NguoiDung {
     public void setNgayCapNhat(Timestamp ngayCapNhat) {
         this.ngayCapNhat = ngayCapNhat;
     }
+    
+    public String getSoDienThoai() {
+    	return soDienThoai;
+    }
+    
+	public void setSoDienThoai(String soDienThoai) {
+		this.soDienThoai = soDienThoai;
+	}
 }
