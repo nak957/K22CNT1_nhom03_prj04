@@ -27,7 +27,7 @@ public class DangNhapServlet extends HttpServlet {
             if ("admin".equalsIgnoreCase(nguoiDung.getVaiTro())) {
                 response.sendRedirect("admin/index_admin.jsp");
             } else {
-                response.sendRedirect("nguoidung/index_nguoidung.jsp");
+                response.sendRedirect("khachhang/index_khachhang.jsp");
             }
         } else {
             request.setAttribute("errorMessage", "Sai email hoặc mật khẩu!");
