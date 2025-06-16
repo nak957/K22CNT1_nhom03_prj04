@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="bg-light">
-
 <jsp:include page="../header.jsp" />
-
 <div class="container mt-5 pt-5 d-flex justify-content-center" style="margin-top: 120px !important;">
     <div class="card shadow-sm rounded-4 w-100" style="max-width: 400px;">
         <div class="card-body px-4 py-4">
@@ -24,6 +22,14 @@
                 <small class="text-muted">để tiếp tục với Goldwin</small>
             </div>
 
+            <!-- ✅ Thông báo đăng xuất thành công -->
+            <c:if test="${param.logout == 'success'}">
+                <div class="alert alert-success text-center" role="alert">
+                    Bạn đã đăng xuất thành công!
+                </div>
+            </c:if>
+
+            <!-- Hiển thị thông báo lỗi nếu có -->
             <%-- Hiển thị thông báo lỗi nếu có --%>
             <c:if test="${not empty errorMessage}">
                 <div class="alert alert-danger" role="alert">
