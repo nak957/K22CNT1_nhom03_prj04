@@ -48,6 +48,10 @@
                        
                         <div>126.000đ/tháng</div>
                         <div>Hoặc 3.360.000đ </div>
+                         <button class="btn btn-outline-dark btn-sm mt-2 w-100">
+    <i class="fas fa-cart-plus mr-1"></i> Thêm vào giỏ hàng
+</button>
+
                     </div>
                 </a>
             </div>
