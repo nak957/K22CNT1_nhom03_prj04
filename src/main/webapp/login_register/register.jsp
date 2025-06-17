@@ -28,13 +28,14 @@
                         <%
                             String error = request.getParameter("error");
                             String message = request.getParameter("message");
-                            if (error != null && error.equals("true")) {
+                            String success = request.getParameter("success");
+                            if ("true".equals(error) && message != null) {
                         %>
                             <div class="alert alert-danger mt-3" role="alert">
-                                <%= message != null ? java.net.URLDecoder.decode(message, "UTF-8") : "Có lỗi xảy ra! Vui lòng thử lại." %>
+                                <%= java.net.URLDecoder.decode(message, "UTF-8") %>
                             </div>
                         <%
-                            } else if (message != null) {
+                            } else if ("true".equals(success) && message != null) {
                         %>
                             <div class="alert alert-success mt-3" role="alert">
                                 <%= java.net.URLDecoder.decode(message, "UTF-8") %>
@@ -45,7 +46,7 @@
 
                         <form action="/K22CNT1_nhom03_prj04/login_register/nguoidung?action=register" method="post">
                             <div class="mb-3">
-                                <label for="email" class="form-label">vui lòng nhập email</label>
+                                <label for="email" class="form-label">Email</label>
                                 <input type="text" class="form-control" id="email" name="email" required>
                             </div>
                             <div class="mb-3">
@@ -66,15 +67,14 @@
                                     </button>
                                 </div>
                             </div>
-							 <div class="mb-3">
-							    <label for="soDienThoai" class="form-label">Số điện thoại</label>
-							    <input type="text" class="form-control" id="soDienThoai" name="soDienThoai" required>
-							</div><div class="mb-3">
-							    <label for="hoTen" class="form-label">Họ tên</label>
-							    <input type="text" class="form-control" id="hoTen" name="hoTen" required>
-							</div>
-							
-                            
+                            <div class="mb-3">
+                                <label for="soDienThoai" class="form-label">Số điện thoại</label>
+                                <input type="text" class="form-control" id="soDienThoai" name="soDienThoai" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="hoTen" class="form-label">Họ tên</label>
+                                <input type="text" class="form-control" id="hoTen" name="hoTen" required>
+                            </div>
                             <button type="submit" class="btn btn-primary w-100">Tiếp tục</button>
                             <div id="error-message" class="alert alert-danger mt-3" role="alert" style="display: none;">
                                 Mật khẩu không khớp!
