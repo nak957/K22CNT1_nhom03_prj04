@@ -73,6 +73,10 @@
 							    <label for="hoTen" class="form-label">Họ tên</label>
 							    <input type="text" class="form-control" id="hoTen" name="hoTen" required>
 							</div>
+							<div class="mb-3">
+							    <label for="diaChi" class="form-label">Địa chỉ</label>
+							    <input type="text" class="form-control" id="diaChi" name="diaChi" required>
+							</div>
 							
                             
                             <button type="submit" class="btn btn-primary w-100">Tiếp tục</button>

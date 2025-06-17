@@ -1,5 +1,4 @@
 package controller;
-
 import java.io.IOException;
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
@@ -21,12 +20,15 @@ public class RegisterServlet extends HttpServlet {
         String matKhau = request.getParameter("matKhau");
         String hoTen = request.getParameter("hoTen");
         String soDienThoai = request.getParameter("soDienThoai");  // Lấy số điện thoại
+        String diaChi = request.getParameter("diaChi");
+
 
         NguoiDung user = new NguoiDung();
         user.setEmail(email);
         user.setMatKhau(matKhau);
         user.setHoTen(hoTen);
-        user.setSoDienThoai(soDienThoai);  // Gán số điện thoại
+        user.setSoDienThoai(soDienThoai);  
+        user.setDiaChi(diaChi);
         user.setVaiTro("khachhang");       // Thiết lập vai trò mặc định
 
         NguoiDungDAO dao = new NguoiDungDAO();
