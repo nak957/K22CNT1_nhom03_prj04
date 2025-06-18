@@ -58,70 +58,73 @@
 </head>
 <body class="bg-light">
 
-<div class="container py-4">
-
-    <h2 class="mb-4 text-center text-primary">Quản lý nhân viên</h2>
+<div class="container py-5">
+    <h2 class="mb-4 text-center fw-bold text-primary">Quản lý nhân viên</h2>
 
     <% if (error != null) { %>
         <div class="alert alert-danger"><%= error %></div>
     <% } %>
 
-    <div class="card mb-4">
-        <div class="card-header bg-primary text-white">
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-primary text-white fw-semibold">
             <%= (nhanVien != null) ? "Cập nhật nhân viên" : "Thêm nhân viên mới" %>
         </div>
         <div class="card-body">
             <form action="Qlynhanvien.jsp?action=save" method="post">
-                <div class="mb-3">
-                    <label class="form-label">Mã nhân viên</label>
-                    <input type="number" name="ma_nhan_vien" class="form-control"
-                           value="<%= (nhanVien != null) ? nhanVien.getMaNhanVien() : "" %>"
-                           <%= (nhanVien != null) ? "readonly" : "" %> required>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Mã nhân viên</label>
+                        <input type="number" name="ma_nhan_vien" class="form-control"
+                               value="<%= (nhanVien != null) ? nhanVien.getMaNhanVien() : "" %>"
+                               <%= (nhanVien != null) ? "readonly" : "" %> required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Họ tên</label>
+                        <input type="text" name="ho_ten" class="form-control"
+                               value="<%= (nhanVien != null) ? nhanVien.getHoTen() : "" %>" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Số điện thoại</label>
+                        <input type="text" name="so_dien_thoai" class="form-control"
+                               value="<%= (nhanVien != null) ? nhanVien.getSoDienThoai() : "" %>" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Email</label>
+                        <input type="email" name="email" class="form-control"
+                               value="<%= (nhanVien != null) ? nhanVien.getEmail() : "" %>" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Địa chỉ</label>
+                        <input type="text" name="dia_chi" class="form-control"
+                               value="<%= (nhanVien != null) ? nhanVien.getDiaChi() : "" %>">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Vai trò</label>
+                        <input type="text" name="vai_tro" class="form-control"
+                               value="<%= (nhanVien != null) ? nhanVien.getVaiTro() : "" %>">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Trạng thái</label>
+                        <select name="trang_thai" class="form-select">
+                            <option value="Đang làm" <%= (nhanVien != null && "Đang làm".equals(nhanVien.getTrangThai())) ? "selected" : "" %>>Đang làm</option>
+                            <option value="Nghỉ làm" <%= (nhanVien != null && "Nghỉ làm".equals(nhanVien.getTrangThai())) ? "selected" : "" %>>Nghỉ làm</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label class="form-label">Họ tên</label>
-                    <input type="text" name="ho_ten" class="form-control"
-                           value="<%= (nhanVien != null) ? nhanVien.getHoTen() : "" %>" required>
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-success">Lưu</button>
                 </div>
-                <div class="mb-3">
-                    <label class="form-label">Số điện thoại</label>
-                    <input type="text" name="so_dien_thoai" class="form-control"
-                           value="<%= (nhanVien != null) ? nhanVien.getSoDienThoai() : "" %>" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Email</label>
-                    <input type="email" name="email" class="form-control"
-                           value="<%= (nhanVien != null) ? nhanVien.getEmail() : "" %>" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Địa chỉ</label>
-                    <input type="text" name="dia_chi" class="form-control"
-                           value="<%= (nhanVien != null) ? nhanVien.getDiaChi() : "" %>">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Vai trò</label>
-                    <input type="text" name="vai_tro" class="form-control"
-                           value="<%= (nhanVien != null) ? nhanVien.getVaiTro() : "" %>">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Trạng thái</label>
-                    <select name="trang_thai" class="form-select">
-                        <option value="Đang làm" <%= (nhanVien != null && "Đang làm".equals(nhanVien.getTrangThai())) ? "selected" : "" %>>Đang làm</option>
-                        <option value="Nghỉ làm" <%= (nhanVien != null && "Nghỉ làm".equals(nhanVien.getTrangThai())) ? "selected" : "" %>>Nghỉ làm</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-success">Lưu</button>
             </form>
         </div>
     </div>
 
-    <div class="card">
-        <div class="card-header bg-secondary text-white">
+    <div class="card shadow-sm">
+        <div class="card-header bg-dark text-white fw-semibold">
             Danh sách nhân viên
         </div>
         <div class="card-body table-responsive">
             <table class="table table-bordered table-hover align-middle text-center">
-                <thead class="table-light">
+                <thead class="table-secondary">
                 <tr>
                     <th>Mã</th>
                     <th>Họ tên</th>
@@ -145,7 +148,7 @@
                             <td><%= item.getVaiTro() %></td>
                             <td><%= item.getTrangThai() %></td>
                             <td>
-                                <a href="Qlynhanvien.jsp?action=edit&id=<%= item.getMaNhanVien() %>" class="btn btn-sm btn-warning">Sửa</a>
+                                <a href="Qlynhanvien.jsp?action=edit&id=<%= item.getMaNhanVien() %>" class="btn btn-sm btn-warning me-1">Sửa</a>
                                 <a href="Qlynhanvien.jsp?action=delete&id=<%= item.getMaNhanVien() %>" class="btn btn-sm btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa?');">Xóa</a>
                             </td>
                         </tr>
@@ -157,7 +160,6 @@
             </table>
         </div>
     </div>
-
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

@@ -12,6 +12,9 @@
 <body class="bg-light">
 <jsp:include page="../header.jsp" />
 <div class="container mt-5 pt-5 d-flex justify-content-center" style="margin-top: 120px !important;">
+ <div class="col-md-6 d-flex justify-content-center align-items-center">
+                <img src="../assets/img/signin.png" alt="Nội thất" class="img-fluid" style="width: 100%; max-width: 500px;">
+            </div>
     <div class="card shadow-sm rounded-4 w-100" style="max-width: 400px;">
         <div class="card-body px-4 py-4">
             <div class="text-center mb-3">
