@@ -34,13 +34,19 @@
                 </div>
             </c:if>
 
-            <!-- Hiển thị thông báo lỗi nếu có -->
-            <%-- Hiển thị thông báo lỗi nếu có --%>
-            <c:if test="${not empty errorMessage}">
-                <div class="alert alert-danger" role="alert">
-                    ${errorMessage}
-                </div>
-            </c:if>
+            <%-- Hiện thị lỗi khi đăng nhập sai --%>
+				<%
+				    String error = request.getParameter("error");
+				    String message = request.getParameter("message");
+				    if ("true".equals(error) && message != null) {
+				%>
+				    <div class="alert alert-danger text-center" role="alert">
+				        <%= java.net.URLDecoder.decode(message, "UTF-8") %>
+				    </div>
+				<%
+				    }
+				%>
+
 
             <form action="${pageContext.request.contextPath}/DangNhapServlet" method="post">
                 <div class="mb-3">

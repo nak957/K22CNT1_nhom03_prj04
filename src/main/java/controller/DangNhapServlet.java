@@ -30,8 +30,8 @@ public class DangNhapServlet extends HttpServlet {
                 response.sendRedirect("khachhang/index_khachhang.jsp");
             }
         } else {
-            request.setAttribute("errorMessage", "Sai email hoặc mật khẩu!");
-            request.getRequestDispatcher("login_register/login.jsp").forward(request, response);
+        	String message = "Sai email hoặc mật khẩu!";
+        	response.sendRedirect("login_register/login.jsp?error=true&message=" + java.net.URLEncoder.encode(message, "UTF-8"));
         }
     }
 }

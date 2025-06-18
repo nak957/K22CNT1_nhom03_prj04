@@ -43,7 +43,10 @@
             <button class="btn btn-outline-secondary btn-sm mr-2">
                 <img src="https://flagcdn.com/w20/vn.png" width="20" height="14" class="mr-1 align-middle"> Hà Nội
             </button>
-
+			<!-- Sửa thông tin cá nhân -->
+			<a href="${pageContext.request.contextPath}/khachhang/suathongtin_khachhang.jsp" class="btn btn-outline-info btn-sm mr-2">
+			    <i class="fas fa-user-edit me-1"></i> Sửa thông tin
+			</a>
             <button class="btn btn-outline-danger btn-sm" onclick="window.location.href='${pageContext.request.contextPath}/logout'">
 			  <i class="fas fa-sign-out-alt me-1"></i>Đăng xuất
 			</button>
